@@ -25,11 +25,11 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mdr-xs-veP" userLabel="animationView">
-                    <rect key="frame" x="0.0" y="333.5" width="375" height="333.5"/>
+                    <rect key="frame" x="0.0" y="334" width="375" height="333"/>
                     <color key="backgroundColor" red="0.64093760355609586" green="1" blue="0.80431991780604328" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aNI-xU-ZQz" userLabel="buttonView">
-                    <rect key="frame" x="0.0" y="64" width="375" height="269.5"/>
+                    <rect key="frame" x="0.0" y="64" width="375" height="270"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="动画方式:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXX-ob-vJR">
                             <rect key="frame" x="10" y="10" width="80" height="30"/>
@@ -106,6 +106,60 @@
                                 </button>
                             </subviews>
                         </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="矩形:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tDd-LU-MHJ">
+                            <rect key="frame" x="10" y="90" width="45" height="30"/>
+                            <color key="backgroundColor" red="0.64093760359999996" green="1" blue="0.80431991780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="A9P-Vb-ug3"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="MuQ-xt-ZDg"/>
+                                <constraint firstAttribute="width" constant="45" id="gYv-Tj-XKC"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="wgd-7K-HwL"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="GjO-Ut-1IN">
+                            <rect key="frame" x="60" y="90" width="305" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zyF-vf-7aq">
+                                    <rect key="frame" x="0.0" y="0.0" width="70.5" height="30"/>
+                                    <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="空心矩形"/>
+                                    <connections>
+                                        <action selector="onHollowRectangleButton:" destination="-1" eventType="touchUpInside" id="Vtc-n2-EIw"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kta-7h-3UN">
+                                    <rect key="frame" x="72.5" y="0.0" width="70.5" height="30"/>
+                                    <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="实心矩形"/>
+                                    <connections>
+                                        <action selector="onSolidRectangleButton:" destination="-1" eventType="touchUpInside" id="wIZ-Dx-hWo"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0F8-ec-r8c">
+                                    <rect key="frame" x="145" y="0.0" width="70" height="30"/>
+                                    <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="圆角矩形"/>
+                                    <connections>
+                                        <action selector="onRoundRectangleButton:" destination="-1" eventType="touchUpInside" id="38h-a5-FtX"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="23y-rg-3KI">
+                                    <rect key="frame" x="217" y="0.0" width="88" height="30"/>
+                                    <color key="backgroundColor" red="0.0" green="0.98106676339999999" blue="0.57369142770000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                    <state key="normal" title="单圆角矩形"/>
+                                    <connections>
+                                        <action selector="onSingleRoundRectButton:" destination="-1" eventType="touchUpInside" id="AhY-xy-ohJ"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
@@ -114,10 +168,16 @@
                         <constraint firstItem="LoC-eE-cyO" firstAttribute="leading" secondItem="SXX-ob-vJR" secondAttribute="trailing" constant="5" id="89K-Ad-Mqa"/>
                         <constraint firstItem="WDo-Ht-kRV" firstAttribute="top" secondItem="lBk-kT-cAb" secondAttribute="top" id="98R-ak-4Zl"/>
                         <constraint firstItem="SXX-ob-vJR" firstAttribute="leading" secondItem="aNI-xU-ZQz" secondAttribute="leading" constant="10" id="B3C-hU-qih"/>
+                        <constraint firstAttribute="trailing" secondItem="GjO-Ut-1IN" secondAttribute="trailing" constant="10" id="Dj4-8z-2JK"/>
                         <constraint firstItem="LoC-eE-cyO" firstAttribute="bottom" secondItem="SXX-ob-vJR" secondAttribute="bottom" id="GNB-Cb-5mb"/>
+                        <constraint firstItem="GjO-Ut-1IN" firstAttribute="top" secondItem="tDd-LU-MHJ" secondAttribute="top" id="HXP-Ub-LPO"/>
+                        <constraint firstItem="GjO-Ut-1IN" firstAttribute="leading" secondItem="tDd-LU-MHJ" secondAttribute="trailing" constant="5" id="JrR-UT-PAF"/>
+                        <constraint firstItem="tDd-LU-MHJ" firstAttribute="top" secondItem="lBk-kT-cAb" secondAttribute="bottom" constant="10" id="b6S-Td-dLP"/>
+                        <constraint firstItem="tDd-LU-MHJ" firstAttribute="leading" secondItem="lBk-kT-cAb" secondAttribute="leading" id="deW-uj-tTl"/>
                         <constraint firstItem="lBk-kT-cAb" firstAttribute="leading" secondItem="SXX-ob-vJR" secondAttribute="leading" id="eNE-2n-J1u"/>
                         <constraint firstItem="WDo-Ht-kRV" firstAttribute="bottom" secondItem="lBk-kT-cAb" secondAttribute="bottom" id="eyB-mw-gEs"/>
                         <constraint firstItem="WDo-Ht-kRV" firstAttribute="leading" secondItem="lBk-kT-cAb" secondAttribute="trailing" constant="5" id="lD0-d5-Yvz"/>
+                        <constraint firstItem="GjO-Ut-1IN" firstAttribute="bottom" secondItem="tDd-LU-MHJ" secondAttribute="bottom" id="mvb-3O-h84"/>
                         <constraint firstItem="LoC-eE-cyO" firstAttribute="top" secondItem="SXX-ob-vJR" secondAttribute="top" id="nNW-iE-62d"/>
                         <constraint firstItem="lBk-kT-cAb" firstAttribute="top" secondItem="SXX-ob-vJR" secondAttribute="bottom" constant="10" id="vbx-1S-Dc4"/>
                     </constraints>

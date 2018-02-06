@@ -189,6 +189,71 @@ class ViewController: UIViewController {
         animationView.layer.addSublayer(shapeLayer)
     }
     
+    @IBAction func onHollowRectangleButton(_ sender: Any) {
+        resetAnimationView()
+        
+        let path = UIBezierPath.init(rect: CGRect.init(x: 130, y: 10, width: 100, height: 80))
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = nil
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.bounds = animationView.bounds
+        shapeLayer.position = CGPoint.zero
+        shapeLayer.anchorPoint = CGPoint.zero
+        addAnimationTo(layer: shapeLayer)
+        animationView.layer.addSublayer(shapeLayer)
+    }
+    
+    @IBAction func onSolidRectangleButton(_ sender: Any) {
+        resetAnimationView()
+        
+        let path = UIBezierPath.init(rect: CGRect.init(x: 130, y: 10, width: 100, height: 80))
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = UIColor.blue.cgColor
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.bounds = animationView.bounds
+        shapeLayer.position = CGPoint.zero
+        shapeLayer.anchorPoint = CGPoint.zero
+        addAnimationTo(layer: shapeLayer)
+        animationView.layer.addSublayer(shapeLayer)
+    }
+    
+    @IBAction func onRoundRectangleButton(_ sender: Any) {
+        resetAnimationView()
+        
+        let path = UIBezierPath.init(roundedRect: CGRect.init(x: 130, y: 10, width: 100, height: 80), cornerRadius: 10)
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = nil
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.bounds = animationView.bounds
+        shapeLayer.position = CGPoint.zero
+        shapeLayer.anchorPoint = CGPoint.zero
+        addAnimationTo(layer: shapeLayer)
+        animationView.layer.addSublayer(shapeLayer)
+    }
+    
+    @IBAction func onSingleRoundRectButton(_ sender: Any) {
+        resetAnimationView()
+        
+        
+        let path = UIBezierPath.init(roundedRect: CGRect.init(x: 130, y: 10, width: 100, height: 80), byRoundingCorners: UIRectCorner.topLeft, cornerRadii: CGSize.init(width: 10, height: 10))
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = path.cgPath
+        shapeLayer.fillColor = nil
+        shapeLayer.strokeColor = UIColor.black.cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.bounds = animationView.bounds
+        shapeLayer.position = CGPoint.zero
+        shapeLayer.anchorPoint = CGPoint.zero
+        addAnimationTo(layer: shapeLayer)
+        animationView.layer.addSublayer(shapeLayer)
+        
+    }
 }
 
 extension ViewController {
