@@ -6,4 +6,14 @@
 //  Copyright © 2018年 yaoxp. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+extension UIDevice {
+    public func isX() -> Bool {
+        if UIScreen.main.bounds.height == 812 {
+            return true
+        }
+        
+        return false
+    }
+}
