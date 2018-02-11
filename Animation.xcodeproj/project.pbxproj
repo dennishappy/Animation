@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A8C697E21A4E89907CE9BA6 /* Pods_Animation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84AEBA96472955D0390E1B10 /* Pods_Animation.framework */; };
+		FF268364202C80F200B72089 /* UIColor+Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF268363202C80F200B72089 /* UIColor+Animation.swift */; };
 		FFED890B201ADE740086C337 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFED890A201ADE740086C337 /* AppDelegate.swift */; };
 		FFED8912201ADE740086C337 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FFED8911201ADE740086C337 /* Assets.xcassets */; };
 		FFED8915201ADE740086C337 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FFED8913201ADE740086C337 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 		84AEBA96472955D0390E1B10 /* Pods_Animation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Animation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7870F7F69849831310A3438 /* Pods-Animation.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.release.xcconfig"; path = "Pods/Target Support Files/Pods-Animation/Pods-Animation.release.xcconfig"; sourceTree = "<group>"; };
 		ECE27E521116E1E8ECE8F749 /* Pods-Animation.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Animation.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Animation/Pods-Animation.debug.xcconfig"; sourceTree = "<group>"; };
+		FF268363202C80F200B72089 /* UIColor+Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Animation.swift"; sourceTree = "<group>"; };
 		FFED8907201ADE740086C337 /* Animation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Animation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFED890A201ADE740086C337 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFED8911201ADE740086C337 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 			children = (
 				FFED890A201ADE740086C337 /* AppDelegate.swift */,
 				FFED8922201B1DCE0086C337 /* UtilityExtension.swift */,
+				FF268363202C80F200B72089 /* UIColor+Animation.swift */,
 				FFED891C201B0DAB0086C337 /* ViewController.swift */,
 				FFED891D201B0DAB0086C337 /* ViewController.xib */,
 				FFED8911201ADE740086C337 /* Assets.xcassets */,
@@ -222,6 +225,7 @@
 			files = (
 				FFED8923201B1DCE0086C337 /* UtilityExtension.swift in Sources */,
 				FFED891E201B0DAB0086C337 /* ViewController.swift in Sources */,
+				FF268364202C80F200B72089 /* UIColor+Animation.swift in Sources */,
 				FFED890B201ADE740086C337 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
