@@ -640,7 +640,7 @@ class ViewController: UIViewController {
             })
         })
         
-        Timer.scheduledTimer(withTimeInterval: 4, repeats: false, block: {(timer) in
+        Timer.scheduledTimer(withTimeInterval: 2, repeats: false, block: {(timer) in
             // 4s后重播放到暂停按钮
             self.strokeEndAnimation(fromValue: 1.0, toValue: 0.0, layer: undersideCircleShape, duration: duration)
             self.strokeEndAnimation(fromValue: 1.0, toValue: 0.0, layer: aboveCircleShape, duration: duration)
