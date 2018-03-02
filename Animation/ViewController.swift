@@ -16,6 +16,7 @@ class ViewController: UIViewController {
     
     // 1.无动画；2.普通动画；3.从中间开始的动画；4.在2的基础上中间线变宽，最后恢复；
     @IBOutlet weak var animationStyle: UISegmentedControl!
+    @IBOutlet weak var skipBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,11 +31,33 @@ class ViewController: UIViewController {
         title = "学习贝塞尔曲线"
         // Do any additional setup after loading the view.
         
+        customizedSkipButton()
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    func customizedSkipButton() {
+        let centerPoint = CGPoint.init(x: skipBtn.frame.size.width/2.0, y: skipBtn.frame.size.height/2.0)
+        let radius = skipBtn.frame.size.width/2.0
+        
+        let path = UIBezierPath.init(arcCenter: centerPoint, radius: radius, startAngle: CGFloat(-Double.pi*0.5), endAngle: CGFloat(Double.pi*1.5), clockwise: true)
+        
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.fillColor = UIColor.lightGray.cgColor
+        shapeLayer.strokeColor = UIColor.red.cgColor
+        shapeLayer.lineWidth = 2
+        shapeLayer.path = path.cgPath
+        
+        let animation = CABasicAnimation.init(keyPath: "strokeEnd")
+        animation.fromValue = 0
+        animation.toValue = 1
+        animation.duration = 3.0
+        shapeLayer.add(animation, forKey: nil)
+        
+        skipBtn.layer.addSublayer(shapeLayer);
     }
     
     func resetAnimationView() {
@@ -655,7 +678,7 @@ class ViewController: UIViewController {
         })
 
     }
-    
+
 }
 
 extension ViewController {
