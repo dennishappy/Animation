@@ -11,8 +11,6 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var animationView: UIView!
-    @IBOutlet weak var bottonViewTop: NSLayoutConstraint!
-    @IBOutlet weak var animationViewBottom: NSLayoutConstraint!
     
     // 1.无动画；2.普通动画；3.从中间开始的动画；4.在2的基础上中间线变宽，最后恢复；
     @IBOutlet weak var animationStyle: UISegmentedControl!
@@ -20,14 +18,6 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if UIDevice.current.isX() {
-            bottonViewTop.constant = 88
-            animationViewBottom.constant = 38
-        } else {
-            bottonViewTop.constant = 64
-            animationViewBottom.constant = 0
-        }
         title = "学习贝塞尔曲线"
         // Do any additional setup after loading the view.
         
